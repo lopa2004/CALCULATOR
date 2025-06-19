@@ -1,0 +1,124 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Container with glass effect */
+.container {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  max-width: 360px;
+  width: 100%;
+}
+
+/* Calculator structure */
+.calculator {
+  width: 100%;
+}
+
+.display {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: right;
+  word-wrap: break-word;
+}
+
+#expression {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}
+
+#result {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Basic button style */
+.btn {
+  padding: 18px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 14px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* Hover effect */
+.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* Operator buttons like +, -, ×, ÷ */
+.operator {
+  color: #00d4ff;
+}
+
+/* Scientific function buttons: sin, cos, tan */
+.func {
+  background-color: rgba(0, 255, 255, 0.15);
+  color: #ffd700;
+}
+
+/* Equal button style */
+.equal {
+  background: #00d4ff;
+  color: #000;
+  font-weight: bold;
+  grid-column: span 1;
+}
+
+/* Span two columns for 0 if needed */
+.zero {
+  grid-column: span 2;
+}
+
+/* Responsive for small screens */
+@media (max-width: 400px) {
+  .btn {
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  .display {
+    padding: 15px;
+  }
+
+  #result {
+    font-size: 1.8rem;
+  }
+
+  #expression {
+    font-size: 0.9rem;
+  }
+}
+
